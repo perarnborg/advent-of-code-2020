@@ -60,19 +60,5 @@
 
   const second = structurePassports().filter(passport => validate(passport, ['cid'], true)).length
 
-  console.log('byr valid:   2002', validateFieldInput('byr', '2002'))
-  console.log('byr invalid: 2003', validateFieldInput('byr', '2003'))
-  console.log('hgt valid:   60in', validateFieldInput('hgt', '60in'))
-  console.log('hgt valid:   190cm', validateFieldInput('hgt', '190cm'))
-  console.log('hgt invalid: 190in', validateFieldInput('hgt', '190in'))
-  console.log('hgt invalid: 190', validateFieldInput('hgt', '190'))
-  console.log('hcl valid:   #123abc', validateFieldInput('hcl', '#123abc'))
-  console.log('hcl invalid: #123abz', validateFieldInput('hcl', '#123abz'))
-  console.log('hcl invalid: 123abc', validateFieldInput('hcl', '123abc'))
-  console.log('ecl valid:   brn', validateFieldInput('ecl', 'brn'))
-  console.log('ecl invalid: wat', validateFieldInput('ecl', 'wat'))
-  console.log('pid valid:   000000001', validateFieldInput('pid', '000000001'))
-  console.log('pid invalid: 0123456789', validateFieldInput('pid', '0123456789'))
-
   show(4, first, second)
 })()
